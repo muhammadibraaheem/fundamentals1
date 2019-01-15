@@ -3,13 +3,12 @@ import scala.io.StdIn
 
 object GreeterApplication extends App {
 
-  val name1 = StdIn.readLine("What  is your name? \n")
+  val randomname = StdIn.readLine("What  is your name? \n")
 
-  greet(name1)
+  val person : Person  = new Person( randomname)
+  val person2 : Person  = new Person("muhammad")
 
-  def greet(name: String): Unit = {
-    println(s"Hi $name")
-  }
+  println(person.speak())
 }
 
 
